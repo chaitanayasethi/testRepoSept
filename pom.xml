@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>WA</groupId>
-    <artifactId>WA_HELMS_Framework</artifactId>
+    <artifactId>AW_SML_Framework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>WA_HELMS_Framework</name>
+    <name>AW_SML_Framework</name>
     <url>http://maven.apache.org</url>
     <build>
         <plugins>

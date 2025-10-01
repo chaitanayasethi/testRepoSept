@@ -33,6 +33,10 @@ public class scribble {
 		//Step 1
 		ChromeOptions options = new ChromeOptions();
 		WebDriver driver = new ChromeDriver(options);
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+
+		driver.manage().window().maximize();
+
 
 		//Step 2
 		//WHAT AND HOW
@@ -42,7 +46,34 @@ public class scribble {
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("hpotter5@test.com");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("automation@12345");
 		driver.findElement(By.xpath("//input[@value='Log In']")).click();
-		driver.quit();		
+		Thread.sleep(5000);
+		
+		WebElement wb = driver.findElement(By.xpath("//a//span[text()='Accounts']"));
+		js.executeScript("arguments[0].click();", wb);
+//		
+//		Thread.sleep(5000);
+//		List<WebElement> webElementList = driver.findElements(By.xpath("//a[contains(text(),'View')]"));
+//		System.out.println("COUNT **** " + webElementList.size());
+//		for (int i=0; i<webElementList.size();i++){
+//			
+//
+//			System.out.println("findElements displays text of all matching elements, which is, **** " + webElementList.get(i).getText());
+//		}
+
+//		driver.get("https://hogwards-dev-ed.develop.lightning.force.com/lightning/r/Lead/00Q2w00000U1CNTEA3/view");
+//		Thread.sleep(6000);
+//		//getText() method implementation
+//		String getTextVaue = driver.findElement(By.xpath("//html//div//h1//slot//lightning-formatted-name")).getText();
+//		System.out.println("getTextVaue** " + getTextVaue);
+//		
+//		String getAttributeVaue = driver.findElement(By.xpath("//html//div//h1//slot//lightning-formatted-name")).getAttribute("slot");
+//		System.out.println("getAttributeVaue** " + getAttributeVaue);
+//		
+//		boolean displayFlag = driver.findElement(By.xpath("//p[text()='Title']//following::p//slot//lightning-formatted-text[text()='CFO']")).isDisplayed();
+//		System.out.println("displayFlag** "+ displayFlag);
+//	
+//		
+//		driver.quit();		
 
 	}
 	

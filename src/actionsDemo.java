@@ -25,13 +25,13 @@ public class actionsDemo {
 		
 		ChromeOptions options = new ChromeOptions();
 		WebDriver driver = new ChromeDriver(options);
+        Actions actions = new Actions(driver);
 
 		driver.manage().window().maximize();
 
 		 // Example 1: Mouse Hover (moveToElement)
         // Real site: https://www.browserstack.com/
         driver.get("https://www.browserstack.com/");
-        Actions actions = new Actions(driver);
         WebElement liveTab = driver.findElement(By.cssSelector("a[title='Live']"));
         // Move mouse to the "Live" tab to trigger dropdown menu
         actions.moveToElement(liveTab).perform(); // Mouse hover[web:1]
@@ -40,7 +40,7 @@ public class actionsDemo {
         WebElement getStartedBtn = driver.findElement(By.linkText("Get started free"));
         // Click "Get started free" button using Actions
         actions.moveToElement(getStartedBtn).click().perform(); // Click[web:1]
-
+       
         // Example 3: Double Click (doubleClick)
         // Real site: https://api.jquery.com/dblclick/ (Demo link)
         driver.get("https://api.jquery.com/dblclick/");

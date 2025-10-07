@@ -25,6 +25,13 @@ public class fileUpload {
         String os = System.getProperty("os.name").toLowerCase();
         String filePath = "";
 
+        //for uploading multiple files
+        /*String[] filesToUpload = {
+        	    "C:\\path\\to\\file1.jpg",
+        	    "C:\\path\\to\\file2.pdf",
+        	    "C:\\path\\to\\file3.png"
+        	};*/
+        	
         if (os.contains("win")) {
             // Windows file path example
             filePath = "C:\\Users\\username\\Documents\\sample.pdf";

@@ -64,13 +64,13 @@ public class exceptionHandling {
 	*/	
 		
 		//NoSuchElementException
-//		try {
-//		    WebElement fakeElement = driver.findElement(By.id("nonExistentElementId"));
-//		    fakeElement.click();
-//		} catch (Exception e) {
-//		    System.out.println("Exception caught: " + e.getMessage());
-//		    driver.quit();
-//		}
+		try {
+		    WebElement fakeElement = driver.findElement(By.id("nonExistentElementId"));
+		    fakeElement.click();
+		} catch (Exception e) {
+		    System.out.println("Exception caught: " + e.getMessage());
+		    driver.quit();
+		}
 
 		/*StaleElementReferenceException
 		Occurs when an element previously located is no
@@ -88,33 +88,37 @@ public class exceptionHandling {
 //		}
 		
 		//ElementNotInteractableException
-		try {
-		    driver.get("http://the-internet.herokuapp.com/dynamic_controls");
-		    WebElement input = driver.findElement(By.cssSelector("#input-example input"));
-		    input.sendKeys("test"); // Input is initially disabled
-		} catch (ElementNotInteractableException e) {
-		    System.out.println("ElementNotInteractableException caught: " + e.getMessage());
-		}
-
-		//NoSuchFrameException
-		try {
-		    driver.get("https://www.w3schools.com/html/html_iframe.asp");
-		    // Try switching to a frame that does not exist
-		    driver.switchTo().frame("nonExistentFrame");
-		} catch (NoSuchFrameException e) {
-		    System.out.println("NoSuchFrameException caught: The frame was not found on the page.");
-		}
+//		try {
+//		    driver.get("http://the-internet.herokuapp.com/dynamic_controls");
+//		    WebElement input = driver.findElement(By.cssSelector("#input-example input"));
+//		    input.sendKeys("test"); // Input is initially disabled
+//		} catch (ElementNotInteractableException e) {
+//		    System.out.println("ElementNotInteractableException caught: " + e.getMessage());
+//		}
+//
+//		//NoSuchFrameException
+//		try {
+//		    driver.get("https://www.w3schools.com/html/html_iframe.asp");
+//		    // Try switching to a frame that does not exist
+//		    driver.switchTo().frame("nonExistentFrame");
+//		} catch (NoSuchFrameException e) {
+//		    System.out.println("NoSuchFrameException caught: The frame was not found on the page.");
+//		}
+//		
+//		//NoSuchSessionException
+//		try {
+//            driver.get("https://www.google.com");
+//            driver.quit();  // Session terminated
+//
+//            // Trying to interact after quit will cause NoSuchSessionException
+//            driver.get("https://www.youtube.com");
+//		}catch (Exception e) {
+//            System.out.println("Other exception: " + e.getMessage());
+//        }
 		
-		//NoSuchSessionException
-		try {
-            driver.get("https://www.google.com");
-            driver.quit();  // Session terminated
-
-            // Trying to interact after quit will cause NoSuchSessionException
-            driver.get("https://www.youtube.com");
-		}catch (Exception e) {
-            System.out.println("Other exception: " + e.getMessage());
-        }
+		//NoSuchElementException
+		//ElementNotFoundException
+		//TimeOutException
         }
 
 	}

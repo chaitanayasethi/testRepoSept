@@ -19,7 +19,7 @@ public class fileUpload {
 
 		driver.manage().window().maximize();
 		
-		driver.get("http://the-internet.herokuapp.com/upload");
+		driver.get("file:///C:/Users/Sai%20Kishore%20SV/Downloads/!--%20multi.html%20--.html");
         driver.manage().window().maximize();
 
         String os = System.getProperty("os.name").toLowerCase();
@@ -27,14 +27,18 @@ public class fileUpload {
 
         //for uploading multiple files
         /*String[] filesToUpload = {
-        	    "C:\\path\\to\\file1.jpg",
-        	    "C:\\path\\to\\file2.pdf",
-        	    "C:\\path\\to\\file3.png"
+        	    "C:\\Users\\Sai Kishore SV\\OneDrive\\Pictures\\A.jpg",
+        	    "C:\\Users\\Sai Kishore SV\\OneDrive\\Pictures\\B.jpg",
+        	    "C:\\Users\\Sai Kishore SV\\OneDrive\\Pictures\\C.jpg"
         	};*/
         	
         if (os.contains("win")) {
             // Windows file path example
-            filePath = "C:\\Users\\username\\Documents\\sample.pdf";
+            String[] filesToUpload = {
+        	    "C:\\Users\\Sai Kishore SV\\OneDrive\\Pictures\\A.jpg",
+        	    "C:\\Users\\Sai Kishore SV\\OneDrive\\Pictures\\B.jpg",
+        	    "C:\\Users\\Sai Kishore SV\\OneDrive\\Pictures\\C.jpg"
+        	};
         } else if (os.contains("mac")) {
             // Mac file path example
             filePath = "/Users/csethi/Desktop/uploadFile.png";
@@ -45,7 +49,7 @@ public class fileUpload {
         }
 
         WebElement uploadInput = driver.findElement(By.id("file-upload"));
-        uploadInput.sendKeys(filePath);
+        uploadInput.sendKeys(filesToUpload);
 
         driver.findElement(By.id("file-submit")).click();
 

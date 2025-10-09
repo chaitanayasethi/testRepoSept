@@ -55,7 +55,7 @@ public class fileUpload {
 
         // Add further verification or assertions here if needed
 
-        driver.quit();
+        driver.close();
 	}
 	
 	

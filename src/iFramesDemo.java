@@ -22,15 +22,15 @@ public class iFramesDemo {
 		//System.out.println("fetched text ** "+driver.findElement(By.xpath("//h1[text()='This is a sample page']")).getText());
 		
 		//switch to iFrame using iFrame name or ID
-		driver.switchTo().frame("frame8");
+		driver.switchTo().frame("frame100");
 		System.out.println("fetched text ** "+driver.findElement(By.xpath("//h1[text()='This is a sample page']")).getText());
 
 		//switch to iFrame using iFrame index
 		//driver.switchTo().frame(4);
 		
 		//switch back to default window
-//		driver.switchTo().defaultContent();
-//		System.out.println("fetched text ** "+driver.findElement(By.xpath("//h1[text()='Frames']")).getText());
+		driver.switchTo().defaultContent();
+		System.out.println("fetched text ** "+driver.findElement(By.xpath("//h1[text()='Frames']")).getText());
 
 		driver.quit();
 	    

@@ -73,7 +73,7 @@ public class scribble {
 //		System.out.println("displayFlag** "+ displayFlag);
 //	
 //		
-//		driver.quit();		
+		driver.quit();		
 
 	}
 	

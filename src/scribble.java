@@ -33,9 +33,8 @@ public class scribble {
 		//Step 1
 		ChromeOptions options = new ChromeOptions();
 		WebDriver driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
+		driver.get("https://login.salesforce.com/");
 
-		driver.manage().window().maximize();
 
 
 		//Step 2

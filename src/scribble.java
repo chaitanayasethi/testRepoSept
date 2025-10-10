@@ -33,7 +33,7 @@ public class scribble {
 		//Step 1
 		ChromeOptions options = new ChromeOptions();
 		WebDriver driver = new ChromeDriver(options);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
+		driver.manage().window().maximize();
 
 		driver.manage().window().maximize();
 

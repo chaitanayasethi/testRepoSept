@@ -63,7 +63,7 @@ public class webElementsInteractionDemo {
 		driver.get("https://demoqa.com/select-menu");
 		WebElement dropdown = driver.findElement(By.id("oldSelectMenu"));
 		Select select = new Select(dropdown);
-		abcdselect.selectByVisibleText("Green");
+		select.selectByVisibleText("Green");
 
 		//FileUpload
 		driver.get("http://the-internet.herokuapp.com/upload");

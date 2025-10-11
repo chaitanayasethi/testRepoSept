@@ -60,10 +60,10 @@ public class webElementsInteractionDemo {
 		yesRadio.click();
 
 		//Dropdown
-		driver.get("https://demoqaa.com/select-menu");
+		driver.get("https://demoqa.com/select-menu");
 		WebElement dropdown = driver.findElement(By.id("oldSelectMenu"));
 		Select select = new Select(dropdown);
-		select.selectByVisibleText("Green");
+		abcdselect.selectByVisibleText("Green");
 
 		//FileUpload
 		driver.get("http://the-internet.herokuapp.com/upload");

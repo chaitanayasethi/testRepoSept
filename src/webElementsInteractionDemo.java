@@ -60,7 +60,7 @@ public class webElementsInteractionDemo {
 		yesRadio.click();
 
 		//Dropdown
-		driver.get("https://demoqa.com/select-menu");
+		driver.get("https://demoqaa.com/select-menu");
 		WebElement dropdown = driver.findElement(By.id("oldSelectMenu"));
 		Select select = new Select(dropdown);
 		select.selectByVisibleText("Green");

@@ -9,7 +9,7 @@ public class coreJavaTwo {
 	public static void main(String[] args) {
 		
 		//Array
-		
+		//lfsmj
 		//Example aircraftSeats[]
 		
 		int it = 2;
